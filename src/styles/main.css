@@ -1,0 +1,304 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+/* @font-face {
+    font-family:Brudge;
+    src:url('../public/Brudge\ Regular.f6419530.otf') format('truetype')
+} */
+:root{
+    --main-color : #E26A2C;
+    --first-color : #F7D08A;
+    --second-color : #9D5C0D;
+}
+* {
+    font-family: 'Poppins', sans-serif;
+}
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+main {
+    display: block;
+}
+
+img:focus, p:focus, h1:focus {
+    outline: var(--main-color) solid 1.5px;
+}
+.hero-banner {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.548)), url('../public/images/heros/hero-image_4.jpg') !important;
+    width: 100%; 
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+.hero-text {
+    padding: 23% 10%;
+    text-align: center;
+    color: var(--first-color);
+}
+
+.highlight {
+    color: var(--second-color);
+    background-color: var(--first-color);
+}
+
+.nav {
+    position: fixed;
+    width: 100%;
+    margin-left: auto;
+    text-align: center;
+    display: flex;
+    padding: 40px 20px;
+    transition: .3s;
+}
+
+.nav__list {
+    width: 100%;
+    max-width: 920px;
+    margin-left: auto;
+    padding: 0;
+}
+
+.nav__item {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 24%;
+    text-align: center;
+    line-height: 24px;
+}
+
+.img-nav {
+    width: 100%;
+    max-width: 98px;
+    margin-left: auto;
+    background-size: cover;
+}
+
+.nav a {
+    display: inline-block;
+    padding: 1.3em;
+    text-decoration: none;
+    color: var(--first-color);
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+    background-color: white;
+    border: none;
+    min-height: 44px;
+    min-width: 44px;
+}
+
+.line1,
+.line3 {
+    width: 25px;
+    height: 3px;
+    background-color: var(--main-color);
+    margin: 5.5px;
+    transition: all 0.3s ease;
+}
+
+.line2 {
+    width: 30px;
+    height: 3px;
+    background-color: var(--main-color);
+    margin: 5.5px;
+    transition: all 0.3s ease;
+}
+
+.header__menu {
+    font-size: 32px;
+    margin: 10px auto;
+    display: block;
+    width: 30px;
+}
+.hero-banner::after{
+    background-color: rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.scrolled {
+    background-color: white;
+    padding: 10px 20px;
+    color: var(--second-color);
+    box-shadow: 2px 5px 5px rgb(0 0 0 / 0.2);
+}
+
+.scrolled > ul > li > a{
+    color: var(--second-color);
+}
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background-color: var(--first-color);
+    color: var(--second-color);
+    padding: 8px;
+    z-index: 100;
+ }
+
+ .skip-link:focus {
+    top: 0;
+ }
+
+ .list {
+     display: flex;
+     margin: 30px auto;
+     padding: 0 auto;
+     flex-direction: row;
+     width: 100%;
+     max-width: 1300px;
+     flex-wrap: wrap;
+     justify-content: center ;
+ }
+
+ .dflex {
+     display: flex;
+     flex-wrap: wrap;
+ }
+ .card {
+     width: 100%;
+     max-width: 290px;
+     display: inline-block;
+     overflow: hidden;
+     box-shadow: 2px 5px 5px rgb(0 0 0 / 0.2);
+     border-radius: 10px;
+     margin: 30px;
+ }
+
+ .card img {
+     background-size: auto;
+     width: 100%;
+     max-width: 290px;
+     max-height: 190px;
+ }
+
+ .card h1 {
+     font-size: 1.2em;
+ }
+
+ .card-desc {
+     margin: 10px;
+ }
+ 
+ .fa-star {
+     color: var(--main-color);
+ }
+
+ .fa-map-marker-alt {
+     color: var(--main-color);
+ }
+
+ .title {
+     color: var(--main-color);
+     border-bottom: 2px solid var(--main-color);
+     max-width: fit-content;
+     text-align: center;
+     margin: 20px auto;
+ }
+
+ .location {
+     margin-left: auto;
+ }
+
+ .fa-utensils {
+     color: var(--main-color);
+ }
+
+ footer {
+     width: 100%;
+     margin: 0;
+     background-color: var(--main-color);
+     color: white;
+     font-size: 1em;
+     text-align: center;
+ }
+ 
+ footer h3 {
+     margin: 0;
+ }
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+@media screen and (max-width: 590px) {
+    .nav {
+        z-index: 10;
+        background-color: #fff;
+        width: 100%;
+        position: absolute;
+        padding: 0;
+  
+        /* This trasform moves the drawer off canvas. */
+        -webkit-transform: translate(0, -300px);
+        transform: translate(0, -400px);
+  
+        /* Optionally, we animate the drawer. */
+        transition: transform 0.3s ease;
+        
+        
+    }
+    
+    .nav__item a{
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        color: var(--second-color);
+    }
+
+    .img-nav {
+        display: none;
+    }
+  
+    .open {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+  
+    .nav__item {
+        display: list-item;
+
+        width: 100%;
+        text-align: left;
+        list-style: none;
+
+    }
+
+    .burger {
+        display: block;
+        margin: 20px;
+    }
+
+    
+}
+
+@media screen and (min-width: 590px) {
+    .header__menu {
+        display: none;
+    }
+}
